@@ -30,6 +30,19 @@
     .hero-content:before{content:"";display:block;width:min(360px,68vw);height:150px;margin:0 0 14px;background:url('assets/logo-white-transparent.png') left center/contain no-repeat;filter:drop-shadow(0 10px 25px rgba(0,0,0,.18))}
     @media(max-width:760px){.topbar .wordmark{display:none}.topbar{height:70px}.nav{justify-content:flex-end}.mobile-auth{margin-left:auto}.hero{min-height:100dvh;background-position:center top}.hero-content{padding:92px 0 132px}.hero-content:before{width:54vw;height:105px;margin-bottom:12px}.hero h1{font-size:3.2rem;line-height:.92}.hero-copy{line-height:1.45}.mobile-nav{height:64px}.button{min-height:52px}}
   </style>
+  <style>
+    @media(max-width:760px){
+      .topbar{position:absolute;top:0;height:auto;padding-top:max(18px,env(safe-area-inset-top));pointer-events:none}
+      .topbar .nav{width:100%;padding:0 16px;justify-content:flex-end}
+      .topbar .mobile-auth{pointer-events:auto;display:inline-flex;align-items:center;gap:9px;margin:0;min-height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.28);border-radius:14px;background:rgba(4,31,75,.72);box-shadow:0 8px 24px rgba(3,25,61,.2);backdrop-filter:blur(14px);font-size:.76rem;line-height:1;white-space:nowrap}
+      .topbar .mobile-auth:before{content:'G';display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#fff;color:#2767d7;font-weight:900}
+      .hero{min-height:100svh;max-height:920px;background-position:center 13%;align-items:center}
+      .hero-content{padding:118px 0 118px;display:flex;flex-direction:column;align-items:flex-start}
+      .hero-content:before{align-self:center;width:68vw;max-width:290px;height:120px;margin:0 0 16px;background-position:center;filter:drop-shadow(0 12px 28px rgba(0,0,0,.3))}
+      .hero .kicker{margin-top:0}.hero h1{margin-top:14px}.hero-actions{width:100%}.hero-actions .button{min-width:0}.mobile-nav{bottom:max(9px,env(safe-area-inset-bottom));height:66px}
+    }
+    @media(max-width:390px){.hero-content:before{width:62vw;height:100px}.hero h1{font-size:2.85rem}.hero-copy{font-size:.92rem}.topbar .mobile-auth{font-size:.7rem}}
+  </style>
 </head>
 <body>
   <header class="topbar"><nav class="nav wrap"><a href="#inicio" aria-label="One Social Run"><img class="wordmark" src="assets/logo-white-transparent.png" alt="One Social Run San Javier"></a><div class="navlinks"><a href="#proxima">Próxima quedada</a><a href="#nosotros">La comunidad</a><a href="#galeria">Momentos</a><a href="#historial">Historial</a><button class="auth-button js-auth">Entrar con Google</button></div><button class="auth-button js-auth mobile-auth">Entrar</button></nav></header>
